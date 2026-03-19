@@ -5,9 +5,12 @@ import { CartProvider } from "./context/CartContext";
 function App() {
   return (
     <CartProvider>
-      <h1>Shopping Cart</h1>
+                   <h1>Shopping Cart</h1>
+      
+      
+      
       <ProductList />
-      <Cart />
+               <Cart />
     </CartProvider>
   );
 }
