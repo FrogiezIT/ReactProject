@@ -1,15 +1,7 @@
-import ProductList from "./components/ProductList";
-import Cart from "./components/Cart";
-import { CartProvider } from "./context/CartContext";
+import LoginSignup from "./components/LoginSignup";
 
 function App() {
-  return (
-    <CartProvider>
-                   <h1>Shopping Cart</h1>
-      <ProductList />
-               <Cart />
-    </CartProvider>
-  );
+  return <LoginSignup />;
 }
 
 export default App;

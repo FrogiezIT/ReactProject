@@ -26,7 +26,7 @@ const Cart = () => {
             </tr>
 
           ))}
-          <tr className="border border-gray-300 dark:border-gray-700 text-center">
+          <tr className="border border-gray-300 dark:border-gray-700 text-cente">
             <td >
               <h3 className="ml-2">Total: ${total}</h3>
             </td>
@@ -39,3 +39,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
