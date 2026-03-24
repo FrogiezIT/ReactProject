@@ -1,7 +1,7 @@
-import LoginSignup from "./components/LoginSignup";
+import Portfolio from "./components/Portfolio";
 
 function App() {
-  return <LoginSignup />;
+  return <Portfolio />;
 }
 
 export default App;
