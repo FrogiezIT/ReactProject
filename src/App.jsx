@@ -1,7 +1,7 @@
-import Portfolio from "./components/Portfolio";
+import WordPressBloodDonorForm from "./components/WordPressBloodDonorForm";
 
 function App() {
-  return <Portfolio />;
+  return <WordPressBloodDonorForm />;
 }
 
 export default App;

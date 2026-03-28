@@ -1,41 +1,173 @@
 #root {
-  margin: 0 auto;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(191, 219, 254, 0.8), transparent 30%),
+    linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+  color: #0f172a;
+}
+
+code {
+  background: #e2e8f0;
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.35rem;
+}
+
+.wp-form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.wp-form-card {
+  width: min(100%, 760px);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+  padding: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.wp-form-eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.wp-form-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.wp-form-copy {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0.9rem 0 1.6rem;
+}
+
+.wp-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.wp-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.wp-form-grid label:first-child,
+.wp-form-grid button {
+  grid-column: 1 / -1;
+}
+
+.wp-form-grid input,
+.wp-form-grid select {
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #0f172a;
+}
+
+.wp-form-grid input:focus,
+.wp-form-grid select:focus {
+  outline: 3px solid rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+}
+
+.wp-form-grid button {
+  border: 0;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+  box-shadow: 0 18px 30px rgba(220, 38, 38, 0.24);
+}
+
+.wp-form-grid button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.wp-form-grid button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.wp-form-success,
+.wp-form-error {
+  margin: 1rem 0 0;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.wp-form-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.wp-form-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.wp-form-notes,
+.wp-form-result {
+  margin-top: 1.5rem;
+  border-radius: 18px;
+  padding: 1rem 1.2rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.wp-form-notes h2,
+.wp-form-result h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.wp-form-notes ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .wp-form-page {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .wp-form-card {
+    padding: 1.25rem;
+    border-radius: 20px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .wp-form-grid {
+    grid-template-columns: 1fr;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
